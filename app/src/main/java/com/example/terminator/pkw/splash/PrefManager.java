@@ -1,4 +1,4 @@
-package com.example.terminator.pkw.prelogin;
+package com.example.terminator.pkw.splash;
 
 import android.content.Context;
 import android.content.SharedPreferences;
