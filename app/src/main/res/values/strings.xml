@@ -1,3 +1,34 @@
 <resources>
-    <string name="app_name">PKW</string>
+    <string name="app_name">AZ-ZAHRA</string>
+
+    <string name="daftar">Daftar</string>
+    <string name="profile">Profile</string>
+    <string name="profile_sekolah">Profile Sekolah</string>
+    <string name="sejarah_sekolah">Sejarah</string>
+    <string name="prestasi_sekolah">Prestasi</string>
+    <string name="alamat_sekolah">Alamat</string>
+    <string name="visi_sekolah">Visi</string>
+    <string name="misi_sekolah">Mis</string>
+    <string name="kontak_sekolah">Kontak</string>
+    <string name="data_siswa">Data Siswa</string>
+    <string name="data_prestasi">Catatan Prestasi</string>
+    <string name="beasiswa">Beasiswa</string>
+    <string name="login">Masuk</string>
+    <string name="kesejahteraan">Kesejahteraan</string>
+
+    <string name="login_desc">Masuk sekarang untuk menggunakan aplikasi</string>
+    <string name="registered_desc">Masukan identitas diri anda untuk mendaftar</string>
+
+    <string name="regist_desc">Daftarkan diri anda sekarang !</string>
+    <string name="back_desc">Masuk sekarang jika anda sudah terdaftar !</string>
+
+    <!--welcome screen-->
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Halo Pelajar!</string>
+    <string name="slide_1_desc">Cara mudah management data dalam satu aplikasi!</string>
+
+    <string name="title_activity_alamat">Map</string>
 </resources>

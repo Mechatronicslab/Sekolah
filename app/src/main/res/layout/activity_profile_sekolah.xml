@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,42 +8,34 @@
     android:id="@+id/relative"
     tools:context="com.example.terminator.pkw.MainActivity">
 
-
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/slider"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="top"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/slider"
-        android:background="@drawable/gradient_"
-        android:gravity="center"
-        android:id="@+id/textJudul"
-        android:textStyle="bold"
-        android:text="AZ-ZAHRA"
-        android:textColor="#FFF"
-        android:textSize="25dp"
-        android:layout_alignParentLeft="true" />
+        android:layout_height="175dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="275dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textJudul"
         android:gravity="center"
         android:id="@+id/linear"
+        android:layout_marginTop="1dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="@drawable/rounded_white"
         android:layout_alignParentLeft="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,12 +47,11 @@
                 android:layout_height="85dp"
                 android:gravity="center"
                 android:background="#FFF">
-
                 <ImageView
-                    android:id="@+id/menu_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_file" />
+                    android:background="@drawable/ic_stopwatch"
+                    android:id="@+id/menu_1"/>
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
@@ -71,7 +62,7 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/gradient_"
-                android:text="Profile"/>
+                android:text="Sejarah"/>
         </LinearLayout>
 
 
@@ -90,10 +81,10 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_user"
+                    android:background="@drawable/ic_bookmark"
                     android:id="@+id/menu_2"/>
             </LinearLayout>
-            <TextView
+            P<TextView
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -101,8 +92,8 @@
                 android:textColor="@color/putih_agak"
                 android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/gradient_"
-                android:text="Daftar"/>
+            android:background="@drawable/gradient_"
+                android:text="Prestasi"/>
         </LinearLayout>
 
         <LinearLayout
@@ -120,7 +111,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/ic_browser"
+                    android:background="@drawable/ic_map"
                     android:id="@+id/menu_3"/>
             </LinearLayout>
             <TextView
@@ -132,8 +123,79 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/gradient_"
-                android:text="Masuk"/>
+                android:text="Alamat"/>
         </LinearLayout>
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentLeft="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/click_menu4"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
 
-</RelativeLayout>
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:background="#FFF"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/menu_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_calendar_a" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:textColor="@color/putih_agak"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/gradient_"
+                    android:text="Visi"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/click_menu5"
+                android:layout_marginLeft="2dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:gravity="center"
+                    android:background="#FFF">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_calendar"
+                        android:id="@+id/menu_5"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textSize="14dp"
+                    android:textColor="@color/putih_agak"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/gradient_"
+                    android:text="Misi"/>
+            </LinearLayout>
+        </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,11 +1,11 @@
 package com.example.terminator.pkw;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
@@ -22,61 +22,64 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
-
-    boolean doubleBackToExitPressedOnce = false;
-
-    @BindView(R.id.slider)
-    SliderLayout sliderLayout;
+public class ProfileSekolah extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
 
     HashMap<String,Integer> Hash_file_maps ;
-
+    @BindView(R.id.slider)
+    SliderLayout sliderLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        overridePendingTransition(R.anim.fade_out, R.anim.fade_in);
+        setContentView(R.layout.activity_profile_sekolah);
         ButterKnife.bind(this);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        overridePendingTransition(R.anim.fade_out, R.anim.fade_in);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Profile Sekolah");
 
         imageSlider();
     }
 
     @Override
     public void onBackPressed() {
-        if (doubleBackToExitPressedOnce){
-            super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-                System.exit(0);
-            }
-        },2000);
-    };
-
-    @OnClick(R.id.click_menu1)
-    void profile(View v){
-        v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click_anim));
-        Intent a = new Intent(MainActivity.this, ProfileSekolah.class);
+        Intent a = new Intent(ProfileSekolah.this, MainActivity.class);
         startActivity(a);
         finish();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @OnClick(R.id.click_menu1)
+    void sejarah(View v){
+        v.startAnimation(AnimationUtils.loadAnimation(ProfileSekolah.this, R.anim.click_anim));
+    }
+
     @OnClick(R.id.click_menu2)
-    void daftar(View v){
-        v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click_anim));
+    void presatasi(View v){
+        v.startAnimation(AnimationUtils.loadAnimation(ProfileSekolah.this, R.anim.click_anim));
     }
 
     @OnClick(R.id.click_menu3)
-    void masuk(View v){
-        v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click_anim));
+    void almat(View v){
+        v.startAnimation(AnimationUtils.loadAnimation(ProfileSekolah.this, R.anim.click_anim));
+    }
+
+    @OnClick(R.id.click_menu4)
+    void vsi(View v){
+        v.startAnimation(AnimationUtils.loadAnimation(ProfileSekolah.this, R.anim.click_anim));
+    }
+
+    @OnClick(R.id.click_menu5)
+    void misi(View v){
+        v.startAnimation(AnimationUtils.loadAnimation(ProfileSekolah.this, R.anim.click_anim));
     }
 
     public void imageSlider(){
@@ -88,12 +91,12 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         Hash_file_maps.put("   ",R.drawable.slide4);
 
         for(String name : Hash_file_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(MainActivity.this);
+            TextSliderView textSliderView = new TextSliderView(ProfileSekolah.this);
             textSliderView
                     .description(name)
                     .image(Hash_file_maps.get(name))
                     .setScaleType(BaseSliderView.ScaleType.Fit)
-                    .setOnSliderClickListener(MainActivity.this);
+                    .setOnSliderClickListener(ProfileSekolah.this);
             textSliderView.bundle(new Bundle());
             textSliderView.getBundle()
                     .putString("extra",name);
@@ -103,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         sliderLayout.setCustomAnimation(new DescriptionAnimation());
         sliderLayout.setDuration(6000);
-        sliderLayout.addOnPageChangeListener(MainActivity.this);
+        sliderLayout.addOnPageChangeListener(ProfileSekolah.this);
     }
 
     @Override
@@ -121,6 +124,4 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     @Override
     public void onPageScrollStateChanged(int state) {}
-
-
 }
