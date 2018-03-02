@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     @OnClick(R.id.click_menu2)
     void daftar(View v){
         v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click_anim));
+        Intent a = new Intent(MainActivity.this, DaftarSiswaActivity.class);
+        startActivity(a);
+        finish();
     }
 
     @OnClick(R.id.click_menu3)

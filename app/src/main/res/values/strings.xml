@@ -31,4 +31,33 @@
     <string name="slide_1_desc">Cara mudah management data dalam satu aplikasi!</string>
 
     <string name="title_activity_alamat">Map</string>
+
+    <!--array to spiner -->
+    <string-array name="jenisKelamin">
+        <item>--</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <!--array to spiner -->
+    <string-array name="agama">
+        <item>--</item>
+        <item>Islam</item>
+        <item>Kristem</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Khatolik</item>
+        <item>Protestan</item>
+    </string-array>
+
+    <!--array to spiner -->
+    <string-array name="jurusan">
+        <item>--</item>
+        <item>Teknik Distribusi Tenaga Listrik</item>
+        <item>Teknik Instalasi Pemanfaatan Tenaga Listrik</item>
+        <item>Teknik Otomotif Kendaraan Ringan</item>
+        <item>Teknik Komputer Jaringan</item>
+        <item>Teknik Otomotif Sepeda Motor</item>
+        <item>Multimedia</item>
+    </string-array>
 </resources>

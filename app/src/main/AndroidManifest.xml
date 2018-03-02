@@ -27,7 +27,10 @@
         <activity
             android:name=".ProfileSekolah"
             android:screenOrientation="portrait" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DaftarSiswaActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
