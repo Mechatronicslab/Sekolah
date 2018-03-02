@@ -45,20 +45,11 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
 
     @Override
     public void onBackPressed() {
-        if (doubleBackToExitPressedOnce){
+        //if (doubleBackToExitPressedOnce){
             super.onBackPressed();
+            System.exit(0);
             return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-                System.exit(0);
-            }
-        },2000);
+        //}
     };
 
     @OnClick(R.id.click_menu1)
@@ -77,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     @OnClick(R.id.click_menu3)
     void masuk(View v){
         v.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.click_anim));
+        Intent a = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(a);
+        finish();
     }
 
     public void imageSlider(){
